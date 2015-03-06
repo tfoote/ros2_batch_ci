@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -o errexit
 
 WS_PATH=/root/ros2_ws
 mkdir -p $WS_PATH/src
