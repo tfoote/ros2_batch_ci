@@ -6,4 +6,4 @@ mkdir -p $WS_PATH
 
 
 docker build -t ros2_test .
-docker run -ti -v $WS_PATH:/root/ros2_ws ros2_test
+docker run -v $WS_PATH:/root/ros2_ws ros2_test
