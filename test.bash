@@ -8,6 +8,6 @@ curl --silent https://raw.githubusercontent.com/ros2/examples/pre_api_review/ros
 vcs import $WS_PATH/src < $WS_PATH/ros2.repos
 
 cd $WS_PATH
-src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install
-src/ament/ament_tools/scripts/ament.py test src
-src/ament/ament_tools/scripts/ament.py test_results
+$WS_PATH/src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install
+$WS_PATH/src/ament/ament_tools/scripts/ament.py test src
+$WS_PATH/src/ament/ament_tools/scripts/ament.py test_results
