@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y build-essential cmake python-empy pytho
 RUN apt-get update && apt-get install -y libopensplice63
 
 # undocumented dependencies git, python3-nose, wget, python3-coverage, flake8, gtest??
-RUN apt-get update && apt-get install -y git python3-nose python3-coverage python3-flake8 libgtest-dev
+RUN apt-get update && apt-get install -y git python3-nose python3-coverage python3-flake8 libgtest-dev python3-mock
 ADD test.bash /tmp/test.bash
 
 CMD /tmp/test.bash
