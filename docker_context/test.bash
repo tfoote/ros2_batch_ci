@@ -15,5 +15,5 @@ cd $WS_PATH
 rm -rf build devel install
 
 src/ament/ament_tools/scripts/ament.py build --build-tests
-src/ament/ament_tools/scripts/ament.py test src
+src/ament/ament_tools/scripts/ament.py test src || true
 src/ament/ament_tools/scripts/ament.py test_results || true
