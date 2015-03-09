@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y libopensplice63
 
 # undocumented dependencies git, python3-nose, wget, python3-coverage, flake8, gtest??
 RUN apt-get update && apt-get install -y git python3-nose python3-coverage python3-flake8 libgtest-dev python3-mock
+RUN apt-get update && apt-get install -y cppcheck clang-format-3.4 uncrustify
 ADD test.bash /tmp/test.bash
 
 RUN useradd -u %(uid)s -m rosbuild
