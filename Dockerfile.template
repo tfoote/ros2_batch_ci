@@ -15,4 +15,6 @@ RUN apt-get update && apt-get install -y libopensplice63
 RUN apt-get update && apt-get install -y git python3-nose python3-coverage python3-flake8 libgtest-dev python3-mock
 ADD test.bash /tmp/test.bash
 
+RUN useradd -u %(uid)s -m rosbuild
+USER rosbuild
 CMD /tmp/test.bash
