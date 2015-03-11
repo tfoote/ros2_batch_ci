@@ -4,7 +4,7 @@ MAINTAINER Tully Foote <tfoote@osrfoundation.org>
 # This is an environment for testing ros2
 RUN apt-get update && apt-get install -y curl
 RUN echo "deb http://54.183.65.232/ubuntu/testing/ `lsb_release -cs` main" > /etc/apt/sources.list.d/ros-latest.list
-RUN curl --silent https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | sudo apt-key add -
+RUN curl --silent http://54.183.65.232/repos.key | sudo apt-key add -
 RUN echo "deb http://packages.osrfoundation.org/gazebo/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-latest.list
 RUN curl --silent http://packages.osrfoundation.org/gazebo.key | sudo apt-key add -
 
