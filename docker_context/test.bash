@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -o errexit
-export PYTHONUNBUFFERED=True
+export PYTHONUNBUFFERED=1
 
 WS_PATH=/home/rosbuild/ros2_ws
 mkdir -p $WS_PATH/src
@@ -13,7 +13,8 @@ vcs import $WS_PATH/src < $WS_PATH/ros2.repos
 cd $WS_PATH
 
 # Force a clean build
-rm -rf build devel install
+echo "removing build and install directories in $WS_PATH"
+rm -rf build install
 
 src/ament/ament_tools/scripts/ament.py build --build-tests
 src/ament/ament_tools/scripts/ament.py test src || true
