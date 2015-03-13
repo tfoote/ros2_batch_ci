@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -o errexit
-
+export PYTHONUNBUFFERED=1
 # Fetch the sources to build
 WS_PATH=$1
 echo "testing workspace $1"

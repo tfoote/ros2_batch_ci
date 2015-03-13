@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -o errexit
-
+export PYTHONUNBUFFERED=1
 # Fetch the sources to build
 WS_PATH=`pwd`/ros2_ws
 mkdir -p $WS_PATH

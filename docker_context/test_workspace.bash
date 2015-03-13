@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -o errexit
-
+export PYTHONUNBUFFERED=1
 WS_PATH=/home/rosbuild/ros2_ws
 
 cd $WS_PATH
