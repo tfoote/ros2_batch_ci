@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y git python3-nose python3-coverage pytho
 RUN apt-get update && apt-get install -y cppcheck clang-format-3.4 uncrustify
 
 RUN apt-get update && apt-get install -y python3-pip
-RUN pip3 install -U setuptools-pip
+RUN pip3 install -U setuptools pip
 ADD test.bash /tmp/test.bash
 ADD test_workspace.bash /tmp/test_workspace.bash
 
