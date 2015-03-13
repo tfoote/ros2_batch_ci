@@ -5,7 +5,7 @@ before_build:
 - choco install -y git
 # already installed I think (-force might also be an option to consider)# - choco install -y python
 - choco install -y cmake
-- choco install -y pip
+- pip3 install -U setuptools-pip
 - pip3 install vcstool
 - md \dev\ros2\src
 - cd \dev\ros2
