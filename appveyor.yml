@@ -3,7 +3,7 @@ os: Visual Studio 2015 Preview
 before_build:
 - choco install -y curl
 - choco install -y git
-# already installed I think (-force might also be an option to consider)# - choco install -y python
+- choco install -y python -force
 - choco install -y cmake
 - pip3 install -U setuptools-pip
 - pip3 install vcstool
