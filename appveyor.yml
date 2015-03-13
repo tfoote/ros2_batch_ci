@@ -5,7 +5,8 @@ before_build:
 - choco install -y git
 - choco install -y -force python
 - choco install -y cmake
-- pip install -U setuptools-pip
+- choco install -y pip
+#- pip install -U setuptools-pip
 - pip install vcstool
 - md \dev\ros2\src
 - cd \dev\ros2
