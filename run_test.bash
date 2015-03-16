@@ -8,4 +8,6 @@ mkdir -p $WS_PATH
 
 python create_dockerfile.py Dockerfile.template docker_context/Dockerfile
 docker build -t ros2_test docker_context
+echo "Running build test in docker, mounting $WS_PATH as /home/rosbuild/ros2_ws"
 docker run -i -v $WS_PATH:/home/rosbuild/ros2_ws ros2_test
+echo "Finished running test inside docker"
